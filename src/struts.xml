@@ -3,6 +3,16 @@
 <!DOCTYPE struts PUBLIC
         "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd">
-
 <struts>
+
+    <constant name="struts.devMode" value="true" />
+    <package name="helloworld" extends="struts-default">
+
+        <action name="magicball"
+                class="org.minced.struts.magicball.action.eightball"
+                method="execute">
+            <result name="success">/magicEightBall.jsp</result>
+        </action>
+
+    </package>
 </struts>
